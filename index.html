@@ -10,7 +10,41 @@
     ></script>
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
+    <!-- Modal box -->
+    <input type="checkbox" hidden id="show-hide-forms" />
+    <div class="forms-wrapper">
+      <label for="show-hide-forms" class="x-btn">&#10005;</label>
+      <input type="checkbox" hidden id="show-form" />
+      <div class="show-btns-wrapper">
+        <label for="show-form" class="show-form-btn show-signup-form">
+          Sign Up</label
+        >
+        <label for="show-form" class="show-form-btn show-login-form">
+          Login</label
+        >
+      </div>
+      <form class="signup-form">
+        <h3 class="form-heading">Sign up</h3>
+        <div class="fullname-input-wrapper">
+          <input type="text" placeholder="First name" />
+          <input type="text" placeholder="Last name" />
+        </div>
+        <input type="text" class="form-input" placeholder="Username" />
+        <input type="email" class="form-input" placeholder="Email" />
+        <input type="password" class="form-input" placeholder="Password" />
+        <input type="submit" value="Sign up" class="form-btn" />
+      </form>
+      <form class="login-form">
+        <h3 class="form-heading">Log in</h3>
+        <input type="email" class="form-input" placeholder="Email" />
+        <input type="password" class="form-input" placeholder="Password" />
+        <input type="submit" value="Log in" class="form-btn" />
+      </form>
+    </div>
+
+    <!-- End of Modal box -->
     <!-- Navbar -->
     <div class="container">
       <ul class="social-icons">
@@ -34,7 +68,9 @@
         <ul class="first-nav-list">
           <li class="first-nav-item">
             <a href="#" class="first-nav-link">
-              <i class="fas fa-sign-in-alt"></i>Sign Up / Log In
+              <label for="show-hide-forms">
+                <i class="fas fa-sign-in-alt"></i>Sign Up / Log In
+              </label>
             </a>
           </li>
           <li class="first-nav-item">
