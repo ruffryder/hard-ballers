@@ -12,7 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Palanquin", serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--white);
 }
 
@@ -27,7 +27,7 @@ body {
       6rem,
       1fr
     );
-  grid-template-rows: repeat(3, min-content) 70vh repeat(5, min-content);
+  grid-template-rows: repeat(3, min-content) 80vh repeat(5, min-content);
   gap: 1.6rem;
   margin-top: 1.6rem;
 }
@@ -253,44 +253,29 @@ body {
 
 .slider-heading {
   font-size: 10rem;
-  color: var(--black);
+  color: var(--white);
+  letter-spacing: 0.4rem;
   margin-bottom: 6rem;
 }
 
 .slider-btn {
   width: 16rem;
   height: 5rem;
-  background: linear-gradient(to top, #00154c, #12376e, #23487f);
+  background: linear-gradient(to top, var(--black), var(--primary-color));
   color: #fff;
   border: 0.1rem solid var(--white);
   border-radius: 0.3rem;
   outline: none;
-  position: relative;
-  overflow: hidden;
+}
+
+.slider-btn:hover {
+  background: linear-gradient(to bottom, var(--black), var(--primary-color));
+  cursor: pointer;
 }
 
 .slider-btn-text-one {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
   width: 100%;
-  transition: top 0.2s ease-in;
-}
-.slider-btn-text-two {
-  position: absolute;
-  top: 150%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 100%;
-  transition: top 0.2s ease-in;
-}
-
-.slider-btn:hover .slider-btn-text-one {
-  top: -100%;
-}
-.slider-btn:hover .slider-btn-text-two {
-  top: 50%;
+  letter-spacing: 0.3rem;
 }
 
 .slideshow {
@@ -303,6 +288,15 @@ body {
   width: 400%;
   height: 100%;
   animation: slideshow 20s infinite;
+}
+
+.slide .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
 }
 
 .slide img {
@@ -533,7 +527,7 @@ body {
   grid-template-rows: repeat(4, 10vw);
   gap: 1.6rem;
   margin-top: 6.4rem;
-  background-color: var(--primary-color);
+  background-color: var(--black);
   padding: 1.6rem 0;
 }
 
